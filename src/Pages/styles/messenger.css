@@ -1,0 +1,30 @@
+/* #242a36 */
+
+.messenger-wrapper {
+  /* !изменить */
+  height: 87vh;
+  background-color: #242a36;
+}
+
+.messenger {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.messenger-error {
+  color: red;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.messenger-error span {
+  cursor: pointer;
+  color: green;
+}
+
+.messenger-content {
+  display: flex;
+}

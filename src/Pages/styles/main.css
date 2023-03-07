@@ -1,0 +1,44 @@
+.main-wrapper {
+  background-color: rgb(33, 31, 31);
+  height: 100vh;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  transition: all 0.4s;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+}
+
+.main-buttons {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  background-color: rgb(221, 138, 55);
+  border: 1px solid rgb(221, 138, 55);
+  margin-right: 20px;
+}
+
+.login:hover {
+  border: 1px solid rgb(251, 187, 123);
+  color: black;
+}
+
+.register {
+  color: white;
+  background-color: rgb(66, 66, 251);
+  border: 1px solid rgb(66, 66, 251);
+}
+
+.register:hover {
+  color: black;
+  border: 1px solid rgb(120, 120, 254);
+}
