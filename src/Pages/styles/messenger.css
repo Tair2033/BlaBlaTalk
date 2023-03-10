@@ -2,7 +2,7 @@
 
 .messenger-wrapper {
   /* !изменить */
-  height: 87vh;
+  height: 720px;
   background-color: #242a36;
 }
 
@@ -25,6 +25,17 @@
   color: green;
 }
 
+.messenger-main {
+  height: 100%;
+}
+
 .messenger-content {
+  height: 100%;
   display: flex;
+}
+
+.messenger-container {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
 }

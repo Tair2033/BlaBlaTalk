@@ -8,6 +8,7 @@ import TheSidebar from "../components/sidebar/TheSidebar";
 
 const MessengerPage = () => {
   const messenger = useSelector((state) => state.messenger);
+  const companions = useSelector((state) => state.companions);
   const user = useSelector((state) => state.user);
 
   return (
@@ -16,11 +17,15 @@ const MessengerPage = () => {
         {user.isAuth ? (
           <div className="messenger">
             <TheSidebar />
-            <div className="messenger-main">
-              <div className="messenger-content">
-                <TheChat />
-                <TheMessegesBox />
-                <TheInformBox />
+            <div className="messenger-container">
+              <div className="messenger-main">
+                <div className="messenger-content">
+                  <TheChat />
+                  <TheMessegesBox
+                    companion={companions.activeCompanion || null}
+                  />
+                  <TheInformBox />
+                </div>
               </div>
             </div>
           </div>

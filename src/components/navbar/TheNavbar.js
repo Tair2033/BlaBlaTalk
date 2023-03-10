@@ -18,14 +18,12 @@ const TheNavbar = () => {
   };
 
   const menu = [
-    { name: "Contacts", icon: "fi fi-rr-portrait", link: "contacts" },
-    { name: "Statistic", icon: "fi fi-rr-chart-histogram", link: "statstic" },
     {
       name: "Chats",
       icon: "fi fi-rs-comment-alt",
       link: `messenger/${user.id}`,
     },
-    { name: "Settings", icon: "fi fi-rr-apps", link: "settings" },
+    { name: "Contacts", icon: "fi fi-rr-portrait", link: "contacts" },
   ];
 
   return (

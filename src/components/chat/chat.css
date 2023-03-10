@@ -1,9 +1,11 @@
 .chat-wrapper {
   height: 87vh;
   padding: 15px;
+  max-width: 235px;
 }
 
 .chat {
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -20,7 +22,7 @@
   color: #6b6e75;
   position: relative;
   padding: 7px 6px;
-  width: 200px;
+  width: 205px;
   border-radius: 7px;
   font-size: 20px;
 }
@@ -74,6 +76,7 @@
 
 .accordion-header {
   position: relative;
+  z-index: 10;
 }
 
 .accordion-button {
@@ -107,16 +110,29 @@
 }
 
 .chat-list {
+  scroll-behavior: smooth;
+  overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* ширина для вертикального скролла */
+  background-color: #143861;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #843465;
+  border-radius: 9em;
+  box-shadow: inset 1px 1px 10px #f3faf7;
 }
 
 .chat-item {
+  transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   display: flex;
   align-items: center;
-  margin-bottom: 15px;
-  margin-top: 6px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  margin-right: 2px;
 }
 
 .chat-item:first-child {
@@ -141,6 +157,19 @@
   height: 50px;
 }
 
+.text-img {
+  background-color: rgb(246, 152, 19);
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  color: white;
+}
+
 .chat-icon__count {
   display: flex;
   justify-content: center;
@@ -163,11 +192,13 @@
 
 .chat-top {
   margin-bottom: 7px;
+  display: flex;
+  align-items: center;
 }
 
 .chat-top__name {
   color: aliceblue;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -175,12 +206,15 @@
 }
 
 .chat-top__time {
+  color: #878a91;
+  font-size: 10px;
+  margin-left: 10px;
 }
 
 .chat-bottom {
 }
 
 .chat-bottom__message {
-  font-size: 12px;
+  font-size: 11px;
   color: #878a91;
 }

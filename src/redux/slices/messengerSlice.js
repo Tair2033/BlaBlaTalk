@@ -40,6 +40,9 @@ const initialState = {
       status: false,
     },
   ],
+  messageArea: {
+    rows: 37,
+  },
 };
 
 const messengerSlice = createSlice({
@@ -53,9 +56,16 @@ const messengerSlice = createSlice({
       state.sidebarItems.forEach((item) => (item.status = false));
       state.sidebarItems[action.payload].status = true;
     },
+    changeRows: (state) => {
+      if (state.messageArea.rows > 120) {
+        return;
+      }
+      state.messageArea.rows = state.messageArea.rows + 12;
+    },
   },
 });
 
-export const { changeTheme, changeSidebarItem } = messengerSlice.actions;
+export const { changeTheme, changeSidebarItem, changeRows } =
+  messengerSlice.actions;
 
 export default messengerSlice.reducer;

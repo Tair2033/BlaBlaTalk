@@ -1,5 +1,6 @@
 import React from "react";
 import TheCompanion from "./companion/TheCompanion";
+import "./informbox.css";
 
 const TheInformBox = () => {
   return (

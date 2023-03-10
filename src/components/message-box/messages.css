@@ -1,0 +1,155 @@
+.messages-wrapper {
+  height: 88vh;
+  width: 630px;
+}
+
+.messages {
+  position: relative;
+  background-color: #17181f;
+  margin: 15px;
+  height: 96%;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.messages-text {
+  color: white;
+  background-color: #46485c;
+  padding: 3px 12px;
+  border-radius: 10px;
+  user-select: none;
+}
+
+.messages-inside {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 14px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  min-height: 45px;
+  background-color: #000000;
+  color: rgb(135, 134, 134);
+}
+
+.messages-left {
+  display: flex;
+  align-items: center;
+}
+
+.icon-text {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: darkorange;
+}
+
+.messages-left__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.messages-left__icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.messages-right {
+  display: flex;
+}
+
+.message-right__btn {
+  transition: all 0.2s;
+  padding: 0 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.message-right__btn:hover {
+  color: white;
+}
+
+.messages-box {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.messages-content {
+  padding: 14px;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  height: 100%;
+  width: 100%;
+  margin-bottom: 110px;
+}
+
+.context-menu {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(85, 85, 251);
+}
+
+.messages-input {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+}
+
+.messages-input__block {
+  overflow-y: auto;
+  word-wrap: break-word;
+  background-color: #272c36;
+  border: 1px solid #272c36;
+  border-radius: 10px;
+  position: absolute;
+  font-size: 18px;
+  padding: 5px;
+  bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 85%;
+  outline: none;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  padding-right: 68px;
+  padding-left: 8px;
+}
+
+.messages-left__name span {
+  margin-left: 9px;
+  color: white;
+}
+
+.messages-input__btn {
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+}
+
+.messages-input__btn i {
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #feffff;
+  font-size: 20px;
+}
+
+.messages-input__btn:hover i {
+  color: aliceblue;
+}
