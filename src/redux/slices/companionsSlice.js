@@ -291,7 +291,7 @@ const companionsSlice = createSlice({
             text: action.payload.text,
             sender: "Me",
             type: "text",
-            time: new Date().toLocaleTimeString(),
+            time: new Date().toLocaleTimeString().slice(0, 5),
             date: new Date().toLocaleDateString(),
           });
         }

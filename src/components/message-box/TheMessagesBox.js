@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addMessage } from "../../redux/slices/companionsSlice";
-import { changeRows } from "../../redux/slices/messengerSlice";
+import { changeRows, setFile } from "../../redux/slices/messengerSlice";
 import Message from "../../UI/message/Message";
 import "./messages.css";
 
@@ -14,6 +14,7 @@ const TheMessegesBox = (props) => {
   const messenger = useSelector((state) => state.messenger);
   const dispatch = useDispatch();
   const inputRef = useRef(null);
+  const fileInput = useRef(null);
 
   return (
     <div className="messages-wrapper">
@@ -24,6 +25,16 @@ const TheMessegesBox = (props) => {
       ) : (
         <div className="messages">
           <div className="messages-top">
+            <input
+              type="file"
+              ref={fileInput}
+              onChange={(e) => {
+                // dispatch(setFile(e.currentTarget.files[0]));
+                console.log(e.currentTarget.files[0]);
+              }}
+              name=""
+              style={{ visibility: "hidden", display: "none" }}
+            />
             {props.companion ? (
               <div className="messages-inside">
                 <div className="messages-left">
@@ -79,20 +90,33 @@ const TheMessegesBox = (props) => {
               style={{
                 height: "40px",
               }}
-              onInput={(e) => {
-                dispatch(changeRows());
-              }}
+              tabIndex={0}
               ref={inputRef}
+              onKeyDown={(e) => {
+                if (e.key == "Enter" && e.target.textContent !== "") {
+                  dispatch(
+                    addMessage({
+                      messageType: "defaultText",
+                      text: e.target.textContent,
+                    })
+                  );
+                  e.preventDefault();
+                  e.target.textContent = "";
+                }
+              }}
               contentEditable></div>
             <div
               className="messages-input__btn"
-              onClick={() => {
-                dispatch(
-                  addMessage({
-                    messageType: "defaultText",
-                    text: inputRef.current.textContent,
-                  })
-                );
+              onClick={(e) => {
+                if (inputRef.current.textContent !== "") {
+                  dispatch(
+                    addMessage({
+                      messageType: "defaultText",
+                      text: inputRef.current.textContent,
+                    })
+                  );
+                  inputRef.current.textContent = "";
+                }
               }}
               style={{
                 right: "60px",
@@ -101,6 +125,10 @@ const TheMessegesBox = (props) => {
             </div>
             <div
               className="messages-input__btn"
+              onClick={() => {
+                fileInput.current.click();
+                console.dir(fileInput.current.files[0]);
+              }}
               style={{
                 right: "95px",
               }}>

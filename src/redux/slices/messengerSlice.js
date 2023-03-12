@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   theme: true,
+  modal: false,
+  modalData: null,
   sidebarItems: [
     {
       title: "Pinned",
@@ -43,6 +45,7 @@ const initialState = {
   messageArea: {
     rows: 37,
   },
+  file: null,
 };
 
 const messengerSlice = createSlice({
@@ -62,10 +65,22 @@ const messengerSlice = createSlice({
       }
       state.messageArea.rows = state.messageArea.rows + 12;
     },
+    setFile: (state, action) => {
+      state.file = action.payload.file;
+    },
+    toggleModal: (state, action) => {
+      state.modal = !state.modal;
+      state.modalData = action.payload || null;
+    },
   },
 });
 
-export const { changeTheme, changeSidebarItem, changeRows } =
-  messengerSlice.actions;
+export const {
+  changeTheme,
+  changeSidebarItem,
+  changeRows,
+  setFile,
+  toggleModal,
+} = messengerSlice.actions;
 
 export default messengerSlice.reducer;

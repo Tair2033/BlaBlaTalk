@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   selectUser,
@@ -12,6 +12,7 @@ const TheChat = () => {
   const companions = useSelector((state) => state.companions);
   const accordion = useSelector((state) => state.companions.accordion);
   const dispatch = useDispatch();
+  const inputRef = useRef(null);
 
   const activeList = {
     maxHeight: "200px",
@@ -95,7 +96,10 @@ const TheChat = () => {
                                 <div
                                   className="chat-item"
                                   key={indexUser}
-                                  onClick={() => dispatch(selectUser(user))}>
+                                  onClick={() => {
+                                    console.log(inputRef.current);
+                                    dispatch(selectUser(user));
+                                  }}>
                                   <div className="chat-icon">
                                     {user.icon ? (
                                       <img

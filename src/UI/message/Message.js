@@ -1,7 +1,12 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleModal } from "../../redux/slices/messengerSlice";
 import "./message.css";
 
 const Message = (props) => {
+  const messenger = useSelector((state) => state.messenger);
+  const dispatch = useDispatch();
+
   const side = () => {
     if (props.sender == "Companion") {
       return {
@@ -32,7 +37,18 @@ const Message = (props) => {
     return (
       <div className="message-wrapper" style={side()}>
         <div className="message image-message" style={messageStyle()}>
-          <img src={props.image} alt="" className="message-img" />
+          <img
+            src={props.image}
+            alt=""
+            className="message-img"
+            onClick={() => {
+              dispatch(
+                toggleModal({
+                  img: props.image,
+                })
+              );
+            }}
+          />
           {props.text ? (
             <div className="message-img__text">{props.text}</div>
           ) : null}

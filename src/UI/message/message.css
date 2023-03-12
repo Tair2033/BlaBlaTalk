@@ -62,10 +62,6 @@
   right: -4px;
 }
 
-.message-img:hover {
-  filter: brightness(100%);
-}
-
 .message-img__text {
   padding-top: 10px;
   padding-left: 10px;
