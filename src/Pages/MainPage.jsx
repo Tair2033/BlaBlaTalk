@@ -25,7 +25,6 @@ const MainPage = () => {
           <div className='main__right'>
             <div className="main__right-text">
             Introducing our cool messaging app. <br/>We guarantee safety and convenience. <br/>
-            <span>Login or register to continue</span>
             </div>
 
             {!user.isAuth ? (
