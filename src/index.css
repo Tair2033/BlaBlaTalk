@@ -1,6 +1,6 @@
 @import url(reset.css);
-@import url("./fonts/fonts.css");
-@import "~@flaticon/flaticon-uicons/css/all/all";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import '~@flaticon/flaticon-uicons/css/all/all';
 * {
   margin: 0;
   padding: 0;
@@ -8,12 +8,12 @@
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  height: 80vh;
+  height: 100vh;
   background-color: #242a36;
 }
 

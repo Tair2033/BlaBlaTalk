@@ -1,7 +1,7 @@
 .chat-wrapper {
   height: 87vh;
   padding: 15px;
-  max-width: 235px;
+  width: 20vw;
 }
 
 .chat {
@@ -13,6 +13,7 @@
 
 .chat-search {
   position: relative;
+  width: 100%;
 }
 
 .search-input {
@@ -22,9 +23,9 @@
   color: #6b6e75;
   position: relative;
   padding: 7px 6px;
-  width: 205px;
   border-radius: 7px;
   font-size: 20px;
+  width: 100%;
 }
 
 .search-input::placeholder {
@@ -60,6 +61,7 @@
 
 .accordion-wrapper {
   padding-top: 20px;
+  height: 100%;
 }
 
 .accordion {
@@ -126,6 +128,7 @@
 }
 
 .chat-item {
+  white-space: nowrap;
   transition: all 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
   display: flex;
   align-items: center;
@@ -145,16 +148,15 @@
 
 .chat-icon {
   position: relative;
-  max-width: 50px;
-  height: 50px;
   margin-right: 10px;
 }
 
 .chat-icon__img {
-  border-radius: 50%;
   overflow: hidden;
+  border-radius: 50%;
   width: 50px;
   height: 50px;
+  object-fit: cover;
 }
 
 .text-img {
@@ -188,6 +190,7 @@
 }
 
 .chat-info {
+  width: 100%;
 }
 
 .chat-top {

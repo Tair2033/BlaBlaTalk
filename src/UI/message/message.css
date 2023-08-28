@@ -6,8 +6,8 @@
 
 .message {
   max-width: 350px;
-  min-width: 80px;
-  min-height: 30px;
+  min-height: calc(8vh);
+  min-width: calc(5vw);
   display: flex;
   flex-wrap: wrap;
   word-break: break-all;

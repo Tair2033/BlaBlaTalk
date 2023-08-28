@@ -2,7 +2,7 @@
   background-color: #242a36;
   position: relative;
   padding: 0 10px;
-  border-bottom: 3px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .navbar {
@@ -30,6 +30,7 @@
 
 .navbar-logo__wrapper:hover .navbar-logo span {
   color: orange;
+  transition: all 0.6s;
 }
 
 .navbar-logo {
@@ -63,7 +64,7 @@
   list-style: none;
   color: #6b6e75;
   font-size: 14px;
-  border-top: 2px solid #29303e;
+  border-top: 4px solid #29303e;
   padding: 30px 13px;
   margin-left: 10px;
 }
@@ -184,35 +185,41 @@
 
 .navbar-user__info {
   color: #cacbcc;
-  word-wrap: normal;
+  white-space: nowrap;
   min-width: 93px;
 }
 
 .greetings {
   width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: #c0c1c3;
 }
 
 .greetings span {
-  text-align: center;
   display: block;
+  font-size: 16px;
+  padding-top: 4px;
   color: rgb(210, 207, 207);
   margin-left: 5px;
 }
 
 .phone {
-  font-size: 10px;
+  font-size: 9px;
   text-align: center;
-  padding-top: 5px;
+  padding-top: 10px;
   color: #8b8c8e;
 }
 
 .navbar-user__icon {
-  width: 100%;
-  border-radius: 4px;
+  width: 60px;
+  height: 60px;
   margin-left: 15px;
 }
 
 .navbar-user__icon img {
-  width: 60px;
-  height: 60px;
+  width: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }

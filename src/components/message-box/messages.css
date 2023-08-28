@@ -1,6 +1,6 @@
 .messages-wrapper {
-  height: 88vh;
-  width: 630px;
+  width: 55%;
+  height: 90vh;
 }
 
 .messages {
@@ -53,12 +53,16 @@
 .messages-left__icon {
   width: 30px;
   height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-right: 10px;
 }
 
 .messages-left__icon img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   border-radius: 50%;
 }
 
@@ -128,7 +132,7 @@
   width: 85%;
   outline: none;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   padding-right: 68px;
   padding-left: 8px;
 }

@@ -1,5 +1,5 @@
 .sidebar-wrapper {
-  width: 200px;
+  width: 20vw;
   background-color: black;
   height: 100%;
 }
@@ -19,12 +19,13 @@
 .sidebar-list__item {
   user-select: none;
   position: relative;
-  min-width: 135px;
-  height: 50px;
-  border-radius: 10px;
+  width: calc(10vw);
+  height: calc(8vh);
+  border-radius: calc(1.2vw);
   cursor: pointer;
   transition: all 0.3s;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-bottom: 15px;
   padding: 15px 15px;
@@ -43,4 +44,5 @@
 .item-title {
   position: absolute;
   left: 45px;
+  font-size: calc(1vw);
 }

@@ -1,28 +1,28 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  id: "d14jkdsaDFs3daDF",
-  name: "Alex",
-  phone: "+79423424144",
-  isAuth: true,
+  id: 'd14jkdsaDFs3daDF',
+  name: 'Alex',
+  phone: '+79423424144',
+  isAuth: false
 };
 
 const userSlice = createSlice({
-  name: "user",
+  name: 'user',
   initialState,
   reducers: {
     checkAuth: (state) => {
-      const isAuthLocalStorage = localStorage.getItem("isAuth");
+      const isAuthLocalStorage = localStorage.getItem('isAuth');
 
-      if (typeof isAuthLocalStorage === "undefined") {
+      if (typeof isAuthLocalStorage === 'undefined') {
         console.log("You aren't signed in!");
-        localStorage.setItem("isAuth", false);
+        localStorage.setItem('isAuth', false);
       }
     },
     login: (state) => {
       state.isAuth = true;
-    },
-  },
+    }
+  }
 });
 
 export const { login } = userSlice.actions;
